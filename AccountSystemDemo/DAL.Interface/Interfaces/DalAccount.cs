@@ -15,6 +15,5 @@ namespace DAL.Interface.Interfaces
         public decimal Amount { get; set; }
         public int Points { get; set; }
         public int BonusValue { get; set; }
-        public string Email { get; set; }
     }
 }
