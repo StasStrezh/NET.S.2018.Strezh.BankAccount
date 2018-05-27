@@ -12,7 +12,6 @@ namespace BLL.Interface.Entities
         private string _firstName;
         private string _id;
         private string _lastName;
-        private string _email;
         #endregion
         /// <summary>
         /// Constructor
@@ -22,15 +21,13 @@ namespace BLL.Interface.Entities
         /// <param name="lastName"></param>
         /// <param name="amount"></param>
         /// <param name="points"></param>
-        /// <param name="email"></param>
-        protected Account(string id, string firstName, string lastName, decimal amount, int points, string email)
+        protected Account(string id, string firstName, string lastName, decimal amount, int points)
         {
             Id = id;
             FirstName = firstName;
             LastName = lastName;
             Amount = amount;
             Points = points;
-            Email = email;
         }
         /// <summary>
         /// Abstract methods that calculate bonus points
@@ -108,18 +105,6 @@ namespace BLL.Interface.Entities
                 if (string.IsNullOrEmpty(value))
                     throw new ArgumentNullException();
                 _lastName = value;
-            }
-        }
-
-        public string Email
-        {
-            get => _email;
-
-            set
-            {
-                if (string.IsNullOrEmpty(value))
-                    throw new ArgumentNullException();
-                _email = value;
             }
         }
 

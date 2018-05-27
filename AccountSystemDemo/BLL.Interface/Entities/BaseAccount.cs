@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace BLL.Interface.Entities
 {
-    public class BaseAccount : Account
+    public class BasicAccount : Account
     {
-        public BaseAccount(string id, string firstName, string lastName, decimal amount, int points, string email)
-        : base(id, firstName, lastName, amount, points, email)
+        public BasicAccount(string id, string firstName, string lastName, decimal amount, int points)
+        : base(id, firstName, lastName, amount, points)
         {
             BonusValue = 1;
         }
 
-        public override string ToString() => "Base Account" + base.ToString();
+        public override string ToString() => "Basic Account" + base.ToString();
 
         public override int CalculatePointsForDeposit(int bonusValue) => 10 * bonusValue;
         public override int CalculatePointsForWithdraw(int bonusValue) => 10 * bonusValue;

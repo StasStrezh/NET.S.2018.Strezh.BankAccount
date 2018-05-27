@@ -9,11 +9,11 @@ namespace BLL.Interface.Interfaces
 {
     public interface IAccountService
     {
-        Account CreateAccount(AccountType accountType, string firstName, string lastName, decimal amount, string email);
+        Account CreateAccount(AccountType accountType, string firstName, string lastName, decimal amount);
         void AddMoney(Account account, decimal money);
         void AddMoney(string account, decimal money);
-        void DivMoney(Account account, decimal money);
-        void DivMoney(string accountId, decimal money);
+        void WithdrawMoney(Account account, decimal money);
+        void WithdrawMoney(string accountId, decimal money);
         void CloseAccout(Account account);
         void CloseAccout(string accountId);
         string GetAccount(string accountId);

@@ -8,8 +8,8 @@ namespace BLL.Interface.Entities
 {
     public class GoldAccount : Account
     {
-        public GoldAccount(string id, string firstName, string lastName, decimal amount, int points, string email)
-        : base(id, firstName, lastName, amount, points, email)
+        public GoldAccount(string id, string firstName, string lastName, decimal amount, int points)
+        : base(id, firstName, lastName, amount, points)
         {
             BonusValue = 2;
         }
